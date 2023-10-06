@@ -55,6 +55,14 @@ Vector3i Vector3i::snapped(const Vector3i &p_step) const {
 			Math::snapped(z, p_step.z));
 }
 
+real_t Vector3i::distance_to(const Vector3i &p_vector3i) const {
+	return Math::sqrt(float((x - p_vector3i.x) * (x - p_vector3i.x) + (y - p_vector3i.y) * (y - p_vector3i.y)));
+}
+
+real_t Vector3i::distance_squared_to(const Vector3i &p_vector3i) const {
+	return (x - p_vector3i.x) * (x - p_vector3i.x) + (y - p_vector3i.y) * (y - p_vector3i.y);
+}
+
 Vector3i::operator String() const {
 	return "(" + itos(x) + ", " + itos(y) + ", " + itos(z) + ")";
 }

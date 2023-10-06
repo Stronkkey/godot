@@ -53,6 +53,14 @@ double Vector2i::length() const {
 	return Math::sqrt((double)length_squared());
 }
 
+real_t Vector2i::distance_to(const Vector2i &p_vector2i) const {
+	return Math::sqrt(float((x - p_vector2i.x) * (x - p_vector2i.x) + (y - p_vector2i.y) * (y - p_vector2i.y)));
+}
+
+real_t Vector2i::distance_squared_to(const Vector2i &p_vector2i) const {
+	return (x - p_vector2i.x) * (x - p_vector2i.x) + (y - p_vector2i.y) * (y - p_vector2i.y);
+}
+
 Vector2i Vector2i::operator+(const Vector2i &p_v) const {
 	return Vector2i(x + p_v.x, y + p_v.y);
 }

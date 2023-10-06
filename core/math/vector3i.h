@@ -86,6 +86,8 @@ struct _NO_DISCARD_ Vector3i {
 	_FORCE_INLINE_ Vector3i sign() const;
 	Vector3i clamp(const Vector3i &p_min, const Vector3i &p_max) const;
 	Vector3i snapped(const Vector3i &p_step) const;
+	real_t distance_to(const Vector3i &p_vector3i) const;
+	real_t distance_squared_to(const Vector3i &p_vector3i) const;
 
 	/* Operators */
 

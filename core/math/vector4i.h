@@ -88,6 +88,8 @@ struct _NO_DISCARD_ Vector4i {
 	_FORCE_INLINE_ Vector4i sign() const;
 	Vector4i clamp(const Vector4i &p_min, const Vector4i &p_max) const;
 	Vector4i snapped(const Vector4i &p_step) const;
+	real_t distance_to(const Vector4i &p_vector4i) const;
+	real_t distance_squared_to(const Vector4i &p_vector4i) const;
 
 	/* Operators */
 

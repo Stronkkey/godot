@@ -73,6 +73,14 @@ Vector4i Vector4i::snapped(const Vector4i &p_step) const {
 			Math::snapped(w, p_step.w));
 }
 
+real_t Vector4i::distance_to(const Vector4i &p_vector4i) const {
+	return Math::sqrt(float((x - p_vector4i.x) * (x - p_vector4i.x) + (y - p_vector4i.y) * (y - p_vector4i.y)));
+}
+
+real_t Vector4i::distance_squared_to(const Vector4i &p_vector4i) const {
+	return (x - p_vector4i.x) * (x - p_vector4i.x) + (y - p_vector4i.y) * (y - p_vector4i.y);
+}
+
 Vector4i::operator String() const {
 	return "(" + itos(x) + ", " + itos(y) + ", " + itos(z) + ", " + itos(w) + ")";
 }
