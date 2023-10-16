@@ -4984,7 +4984,7 @@ void TextEdit::set_selection_mode(SelectionMode p_mode, int p_line, int p_column
 	}
 	if (p_column >= 0) {
 		ERR_FAIL_INDEX(carets[p_caret].selection.selecting_line, text.size());
-		ERR_FAIL_INDEX(p_column, text[carets[p_caret].selection.selecting_line].length() + 1);
+		ERR_FAIL_INDEX(p_column, text[carets[p_caret].selection.selecting_line].length() + 2);
 		carets.write[p_caret].selection.selecting_column = p_column;
 	}
 }
